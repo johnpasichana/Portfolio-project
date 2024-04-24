@@ -1,0 +1,15 @@
+{
+  "name": "landing-page-eisc-metaverse",
+  "version": "0.1.2",
+  "description": "",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "vite": "^5.2.10"
+  }
+}
