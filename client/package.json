@@ -1,15 +1,23 @@
 {
-  "name": "landing-page-eisc-metaverse",
-  "version": "0.1.2",
-  "description": "",
+  "name": "client",
+  "version": "1.2.2",
+  "description": "Client layer",
   "main": "src/app.js",
   "scripts": {
-    "dev": "vite"
+    "dev": "vite",
+    "deploy": "vercel --prod",
+    "login": "vercel login"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "landing",
+    "eisc",
+    "metaverse",
+    "client"
+  ],
+  "author": "John Breydi Pasichana Muñoz",
+  "license": "MIT",
   "dependencies": {
-    "vite": "^5.2.10"
+    "vercel": "^34.0.0",
+    "vite": "^5.2.8"
   }
 }

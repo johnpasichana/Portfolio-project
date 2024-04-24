@@ -1,13 +1,13 @@
 {
-  "name": "landing-eisc-metaverse-server",
-  "version": "0.0.1",
-  "description": "",
+  "name": "backend",
+  "version": "1.2.2",
+  "description": "Server layer",
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon src/server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "John Breydi Pasichana Muñoz",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
