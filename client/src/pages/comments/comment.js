@@ -1,15 +1,25 @@
 "use strict"
 
 function showComments(){
-    const commentName = sessionStorage.getItem("commentName")
-    const commentEmail = sessionStorage.getItem("commentEmail")
-    const commentBody = sessionStorage.getItem("commentBody")
+    fetch("http://localhost:3000/")
+    .then(response => response.json())
+    .then(data => {
+        data.forEach(comment => {
+            const commentElement = document.createElement('div');
+            commentElement.classList.add('card', 'text-center', 'mb-4');
 
-    const cardHeader = document.querySelector(".card-header")
-    const cardTitle = document.querySelector(".card-title")
-    const cardText = document.querySelector(".card-text")
+            commentElement.innerHTML = `
+                <div class="card-header">
+                    <h2 class="card-title">${comment.name}</h2>
+                    <p class="card-subtitle">${comment.email}</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">${comment.body}</p>
+                </div>
+            `;
 
-    cardHeader.textContent = commentName
-    cardTitle.textContent = commentEmail
-    cardText.textContent = commentBody
+            document.getElementById("comments").appendChild(commentElement);
+        });
+    })
+    .catch(error => console.error(error))
 }

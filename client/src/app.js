@@ -1,18 +1,25 @@
 "use strict"
 
 function fetchComments() {
-    fetch("https://jsonplaceholder.typicode.com/comments")
+    fetch("http://localhost:3000/")
     .then(response => response.json())
     .then(data => {
-        const comment = data[0]
+        data.forEach(comment => {
+            const commentElement = document.createElement('div');
+            commentElement.classList.add('card', 'text-center', 'mb-4');
 
-        sessionStorage.setItem("commentName", comment.name)
-        sessionStorage.setItem("commentEmail", comment.email)
-        sessionStorage.setItem("commentBody", comment.body)
+            commentElement.innerHTML = `
+                <div class="card-header">
+                    <h2 class="card-title">${comment.name}</h2>
+                    <p class="card-subtitle">${comment.email}</p>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">${comment.body}</p>
+                </div>
+            `;
 
-        document.getElementById("name-card-header").textContent = comment.name
-        document.getElementById("email-card-header").textContent = comment.email
-        document.querySelector(".card-body").innerHTML = `<p class="card-text">${comment.body}</p>`
+            document.getElementById("comments").appendChild(commentElement);
+        });
     })
     .catch(error => console.error(error))
 }
