@@ -1,7 +1,7 @@
 "use strict"
 
 function showComments(){
-    fetch("http://localhost:3000/")
+    fetch("http://localhost:3000/persons/")
     .then(response => response.json())
     .then(data => {
         data.forEach(comment => {

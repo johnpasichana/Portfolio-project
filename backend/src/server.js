@@ -48,6 +48,24 @@ app.get("/", async (req, res) => {
     }
 })
 
+app.get("/persons/", async (req, res) => {
+  try{
+      const persons = await client.db("test").collection("persons").find().toArray();
+      res.status(200).json(persons);
+  }catch(err){
+      res.status(500).json({error: err.message})
+  }
+})
+
+app.get("/projects/", async (req, res) => {
+  try{
+      const persons = await client.db("test").collection("projects").find().toArray();
+      res.status(200).json(persons);
+  }catch(err){
+      res.status(500).json({error: err.message})
+  }
+})
+
 app.post("/", async (req, res) => {
     try{
         const newPerson = req.body;
