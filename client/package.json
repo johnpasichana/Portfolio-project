@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "2.6.4",
+  "version": "2.7.4",
   "description": "Landing eisc metaverse",
   "main": "src/app.js",
   "scripts": {

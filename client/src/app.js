@@ -1,6 +1,6 @@
 "use strict"
 
-function fetchDatos() {
+function fetchData() {
     document.getElementById('fetchButton').addEventListener('click', async () => {
         const res = await fetch('http://localhost:3000/');
         const data = await res.json();
