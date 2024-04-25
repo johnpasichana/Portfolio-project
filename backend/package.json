@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "version": "1.6.4",
+  "version": "2.6.4",
   "description": "Server layer",
   "main": "src/server.js",
   "scripts": {
