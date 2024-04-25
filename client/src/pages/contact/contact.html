@@ -14,7 +14,7 @@
     </header>
     <main>
         <section id="section-form-contact">
-            <form onsubmit="return sendData(event)">
+            <form action="https://formsubmit.co/john.pasichana@correounivalle.edu.co" method="POST">
                 <div>
                     <label for="name">Nombre:</label>
                     <input type="text" id="name" name="name" required>
@@ -24,14 +24,35 @@
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div>
+                    <label for="subject">Asunto:</label>
+                    <input type="subject" id="subject" name="subject" required>
+                </div>
+                <div>
                     <label for="message">Mensaje:</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit">Enviar</button>
+                <input type="hidden" name="_captcha" value="false">
             </form>
             <div id="confirmationMessage" style="display: none;">
                 <p>Datos enviados correctamente:</p>
                 <ul id="dataList"></ul>
+            </div>
+        </section>
+        <section id="infoContact" class="section">
+            <div class="contact-info">
+                <h2>Información de Contacto</h2>
+                <p><strong>Nombre:</strong> John Pasichana</p>
+                <p><strong>Email:</strong> john.pasichana@correounivalle.edu.co</p>
+                <p><strong>Teléfono:</strong> 123-456-7890</p>
+                <p><strong>Dirección:</strong> Calle Principal, Ciudad, País</p>
+                
+                <div class="social-links">
+                    <h2>Redes Sociales</h2>
+                    <a href="https://www.facebook.com/" target="_blank">Facebook</a>
+                    <a href="https://twitter.com/" target="_blank">Twitter</a>
+                    <a href="https://www.instagram.com/" target="_blank">Instagram</a>
+                </div>
             </div>
         </section>
     </main>
