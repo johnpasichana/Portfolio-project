@@ -1,7 +1,7 @@
 "use strict"
 
 function showComments(){
-    fetch("${https://portfolio-project-backend-w96x.onrender.com}/persons/")
+    fetch("https://portfolio-project-backend-w96x.onrender.com/persons/")
     .then(response => response.json())
     .then(data => {
         data.forEach(comment => {
