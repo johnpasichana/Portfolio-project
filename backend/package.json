@@ -5,7 +5,6 @@
   "main": "src/server.js",
   "scripts": {
     "dev": "nodemon --env-file=.env src/server.js",
-    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "John Breydi Pasichana Muñoz",
