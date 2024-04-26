@@ -1,10 +1,11 @@
 {
   "name": "backend",
-  "version": "2.7.4",
+  "version": "2.7.5",
   "description": "Server layer",
   "main": "src/server.js",
   "scripts": {
-    "dev": "nodemon --env-file=.env src/server.js"
+    "dev": "nodemon --env-file=.env src/server.js",
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "John Breydi Pasichana Muñoz",

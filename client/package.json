@@ -1,6 +1,6 @@
 {
   "name": "client",
-  "version": "2.7.4",
+  "version": "2.7.5",
   "description": "Landing eisc metaverse",
   "main": "src/app.js",
   "scripts": {
@@ -17,7 +17,11 @@
   "author": "John Breydi Pasichana Muñoz",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.4.5",
     "vercel": "^34.0.0",
     "vite": "^5.2.8"
+  },
+  "devDependencies": {
+    "dotenv-webpack": "^8.1.0"
   }
 }
