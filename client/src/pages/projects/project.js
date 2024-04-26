@@ -1,7 +1,7 @@
 "use strict"
 
 function showProjects(){
-    fetch("https://portfolio-project-backend-w96x.onrender.com/projects/")
+    fetch("http://localhost:3000/projects/")
     .then(response => response.json())
     .then(data => {
         data.forEach(project => {
