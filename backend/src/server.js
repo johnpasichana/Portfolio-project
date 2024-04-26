@@ -44,12 +44,7 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", async (req, res) => {
-    try{
-        const persons = await client.db("test").collection("persons").find().toArray();
-        res.status(200).json(persons);
-    }catch(err){
-        res.status(500).json({error: err.message})
-    }
+    res.send('Hello World!')
 })
 
 app.get("/persons/", async (req, res) => {
